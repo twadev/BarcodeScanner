@@ -15,7 +15,7 @@
          *
          * @returns {BarcodeScanner}
          */
-        function BCScanner() {
+        function BarcodeScanner() {
 
             /**
              * Encoding constants.
@@ -70,7 +70,7 @@
          *    }
          * @param {Function} errorCallback
          */
-        BCScanner.prototype.scan = function (successCallback, errorCallback) {
+        BarcodeScanner.prototype.scan = function (successCallback, errorCallback) {
             if (errorCallback == null) {
                 errorCallback = function () {
                 };
@@ -90,7 +90,7 @@
         };
 
         //-------------------------------------------------------------------
-        BCScanner.prototype.encode = function (type, data, successCallback, errorCallback, options) {
+        BarcodeScanner.prototype.encode = function (type, data, successCallback, errorCallback, options) {
             if (errorCallback == null) {
                 errorCallback = function () {
                 };
@@ -111,14 +111,14 @@
             ]);
         };
 
-        var BCScanner = new BCScanner();
-        module.exports = BCScanner;
+        var barcodeScanner = new BarcodeScanner();
+        module.exports = barcodeScanner;
 
     }
 
     ScannerLoader(require, exports, module);
 
-    cordova.define("cordova/plugin/BCScanner", ScannerLoader);
+    cordova.define("cordova/plugin/BarcodeScanner", ScannerLoader);
 
 
 
